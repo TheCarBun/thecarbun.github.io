@@ -1,13 +1,18 @@
+:root{
+  --clr-bg:#111;
+  --clr-grid: #1e1e1e
+}
 body{
   height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  
-  background: linear-gradient(90deg, #000 10%, transparent 10%) 0 0, linear-gradient(0deg, #000 10%, #111 10%) 10px 0;
-  background-size: 3rem 3rem;
-  
+
+  background-color: var(--clr-bg);
+  background-image: radial-gradient(circle, rgba(175, 208, 84, .25) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 40px 40px;
+
   color: #f0f0f0;
   margin: 0;
   padding: 0;
@@ -26,7 +31,7 @@ body{
 .grid-item{  
   text-align: center;
   border-radius: 0.5rem;
-  background: #1e1e1e;
+  background: var(--clr-grid);
   
   display: flex;
   flex-direction:column;
