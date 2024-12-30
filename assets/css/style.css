@@ -20,6 +20,39 @@ body{
   cursor: default;
 }
 
+nav{
+  position: absolute;
+  top: 1.5rem;
+  height: auto;
+  width: 7rem;
+  padding: 0.5rem;
+  background-color: var(--clr-grid);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+   
+}
+nav img{
+  cursor: pointer;
+  height: 1.5rem;
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s;
+  filter: invert(0.7);
+}
+nav img:hover{
+  transform: scale(1.2);
+  filter: invert(1);
+  stroke: 1px solid white;
+}
+nav .item{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .grid-container{
   padding: 0.5rem;
   color: white;
