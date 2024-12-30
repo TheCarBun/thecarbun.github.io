@@ -153,7 +153,7 @@ body{
 }
 
 
-.projects{
+.tech{
   grid-column:1;
   grid-row:4/7;
   
@@ -161,17 +161,18 @@ body{
   padding: 1rem;
   gap: 1rem;
 }
-.projects h2{
+.tech h2{
   font-size: 1.25rem;
   margin: 0;
   margin-top: 1rem;
 }
-.projects .icons img{
+.tech .icons img{
   height: 3rem;
+  padding: 0.1rem;
   filter: saturate(0%);
-  transition:  filter 0.3s;
+  transition:  all ease-in-out 0.5s;
 }
-.projects .icons img:hover{
+.tech .icons img:hover{
   filter: saturate(100%);
 }
 
@@ -271,7 +272,7 @@ body{
   font-size: 0.7rem;
 }
 
-.projects .icons img{
+.tech .icons img{
   height: 2rem;
 }
 
