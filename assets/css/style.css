@@ -158,50 +158,21 @@ body{
   grid-row:4/7;
   
   font-family: Monospace;
+  padding: 1rem;
+  gap: 1rem;
 }
 .projects h2{
   font-size: 1.25rem;
   margin: 0;
   margin-top: 1rem;
 }
-.projects ul{
-  padding: 0;
+.projects .icons img{
+  height: 3rem;
+  filter: saturate(0%);
+  transition:  filter 0.3s;
 }
-.projects li{
-  cursor: pointer;
-  
-  background: #222222;
-  
-  border-radius: 0.5rem;
-  border-bottom: 1px solid rgb(85, 85, 85);
-  border-right: 1px solid rgb(85, 85, 85);
-  padding: 0.5rem;
-  list-style:none;
-  margin-bottom: 0.75rem;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-  transition: transform 0.5s, background 0.5s;
-}
-.projects li:hover{
-  background: #9aa688;
-  border:none;
-  transform: scale(1.05);
-}
-.projects a{
-  text-decoration: none;
-  color: white;
-}
-.projects h3{  
-  font-size: 0.75rem;
-  margin:0.25rem;
-}
-.projects p{
-  color: #d8d8d8;
-  font-size: 0.6rem;
-  margin:0;
+.projects .icons img:hover{
+  filter: saturate(100%);
 }
 
 
@@ -300,19 +271,8 @@ body{
   font-size: 0.7rem;
 }
 
-.projects h2{
-  font-size: 1rem;
-}
-.projects h3{  
-  font-size: 0.7rem;
-  margin:0.2rem;
-}
-.projects p{
-  font-size: 0.5rem;
-}
-
-.name h1{
-  font-size: 1rem;
+.projects .icons img{
+  height: 2rem;
 }
 
 .contact h2{
