@@ -88,6 +88,8 @@ nav .item{
 .project-item .content{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: -webkit-fill-available;
   padding: 1rem;
 }
 a{
@@ -133,13 +135,11 @@ a{
   text-decoration: none;
 }
 .tech-stack{
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .tech-stack img{
   height: 2rem;
-  width: 2rem;
 }
 
 footer{
