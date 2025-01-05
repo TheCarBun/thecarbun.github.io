@@ -37,24 +37,26 @@ nav {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-nav img {
-  cursor: pointer;
-  height: 1.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transition: transform 0.3s, filter 0.3s;
-  filter: invert(0.7);
-}
-nav img:hover {
-  transform: scale(1.2);
-  filter: invert(1);
-  stroke: 1px solid white;
-}
-nav .item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+
+  img {
+    cursor: pointer;
+    height: 1.5rem;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.3s;
+    filter: invert(0.7);
+
+    &:hover {
+      transform: scale(1.2);
+      filter: invert(1);
+      stroke: 1px solid white;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 }
 
 .projects {
@@ -71,23 +73,25 @@ nav .item {
   border-radius: 1rem;
   display: flex;
   border: 2px solid #555;
-}
-.project-item:hover {
-  border: 2px solid white;
-}
-.project-item img {
-  height: 20rem;
-  padding: 1rem;
-  border-radius: 10%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.project-item .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: -webkit-fill-available;
-  padding: 1rem;
+
+  &:hover {
+    border: 2px solid white;
+  }
+
+  img {
+    height: 20rem;
+    padding: 1rem;
+    border-radius: 10%;
+    object-fit: contain;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    padding: 1rem;
+  }
 }
 
 a {
@@ -95,52 +99,60 @@ a {
   color: #fff;
 }
 
-.content h2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
-  background-color: var(--clr-grid);
-  padding: 0.2rem;
-  border-radius: 0.5rem;
-}
-.content h2:hover {
-  background-color: #fff;
-  color: #000;
-}
-.content a img {
-  height: 2rem;
-}
-.content p {
-  color: #ddd;
-  margin-bottom: 0.7rem;
-  font-size: 1.2rem;
-}
-.content li {
-  list-style-type: square;
-  list-style-position: inside;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.content li span {
-  font-weight: bold;
-  text-decoration: underline;
-  background-color: var(--clr-grid);
-  padding: 0.2rem;
-  border-radius: 0.5rem;
-}
-.content li span:hover {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
+.content {
+  h2 {
+    width: fit-content;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    background-color: var(--clr-grid);
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  a img {
+    height: 2rem;
+  }
+
+  p {
+    color: #ddd;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  li {
+    list-style-type: square;
+    list-style-position: inside;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+
+    span {
+      font-weight: bold;
+      text-decoration: underline;
+      background-color: var(--clr-grid);
+      padding: 0.2rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .tech-stack {
   display: flex;
   flex-direction: row-reverse;
-}
-.tech-stack img {
-  height: 2rem;
+
+  img {
+    height: 2rem;
+  }
 }
 
 footer {
@@ -150,6 +162,7 @@ footer {
 }
 
 /* Animations */
+
 .slide-in-left {
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -159,11 +172,13 @@ footer {
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .slide-in-right {
   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -173,11 +188,13 @@ footer {
     transform: translateX(1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .slide-in-top {
   animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -187,6 +204,7 @@ footer {
     transform: translateY(-1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;

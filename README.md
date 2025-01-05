@@ -8,8 +8,8 @@ This site showcases my projects, skills, and experience as a python developer. E
 Feel free to connect or reach out for collaborations!  
 
 ## To Do:
-- [ ] Projects Page containing my projects with detailed descriptions and links
+- [x] Projects Page containing my projects with detailed descriptions and links
 - [x] About me section 
 - [x] Contact details
-- [ ] Tile flip animations
+- [x] Tile flip animations
 Check it out and let me know your thoughts!  
