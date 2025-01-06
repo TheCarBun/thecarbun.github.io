@@ -81,10 +81,11 @@ nav {
       width: 20vw;
       
       img {
-      width: 100%;
-      border-radius: 5%;
-      object-fit: contain;
-      }
+        height: 100%;
+        width: 100%;
+        border-radius: 5%;
+        object-fit: fill;
+        }
     }
     
 
@@ -96,19 +97,38 @@ nav {
       padding: 1rem;
 
       .heading{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
         a {
           text-decoration: none;
           color: #fff;
         }
         h2 {
-          width: fit-content;
+          padding: 0.2rem;
           font-size: 1.7rem;
-          background-color: var(--clr-grid);
+          background-color: transparent;
           border-radius: 0.5rem;
 
           &:hover {
             background-color: #fff;
             color: #000;
+          }
+        }
+        img {
+          height: 2rem;
+          margin: 0.5rem;
+          filter: invert(1);
+          transition: all ease 0.3s;
+          border: 1px solid transparent;
+
+          &:hover{
+            filter: invert(0);
+            background-color: #fff;
+            transform: scale(1.2);
+            border: 1px solid white;
+            border-radius: 50%;
           }
         }
       }
