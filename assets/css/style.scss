@@ -198,7 +198,7 @@ nav {
   }
 }
 
-.tech {
+.tech-stack {
   grid-column: 1;
   grid-row: 4/7;
   font-family: Monospace;
@@ -211,15 +211,44 @@ nav {
     margin-top: 1rem;
   }
 
-  .icons img {
-    height: 2rem;
-    padding: 0.1rem;
-    filter: saturate(0%);
-    transition: all ease-in-out 0.5s;
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-    &:hover {
-      filter: saturate(100%);
+    .icon {
+      display: flex;
+      position: relative;
+      p {
+        position: absolute;
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        padding: 0.1rem;
+        border-radius: 5%;
+        opacity: 0%;
+        z-index: 1;
+        transition: all ease-in-out 0.5s;
+        top: -2rem;
+      }
+      img {
+        height: 2rem;
+        padding: 0.2rem;
+        filter: saturate(0%);
+        transition: all ease 0.5s;
+      }
+      &:hover img{
+          filter: saturate(100%);
+          transform: scale(1.2);
+        }
+      &:hover p{
+        opacity: 100%;
+        transform: scale(1.1);
+      }
     }
+    
   }
 }
 

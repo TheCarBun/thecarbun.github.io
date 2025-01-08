@@ -188,26 +188,54 @@ nav .item {
   font-size: 0.75rem;
 }
 
-.tech {
+.tech-stack {
   grid-column: 1;
   grid-row: 4/7;
   font-family: Monospace;
   padding: 1rem;
   gap: 1rem;
 }
-.tech h2 {
+.tech-stack h2 {
   font-size: 1.25rem;
   margin: 0;
   margin-top: 1rem;
 }
-.tech .icons img {
-  height: 2rem;
-  padding: 0.1rem;
-  filter: saturate(0%);
-  transition: all ease-in-out 0.5s;
+.tech-stack .tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.tech .icons img:hover {
+.tech-stack .tech-icons .icon {
+  display: flex;
+  position: relative;
+}
+.tech-stack .tech-icons .icon p {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.1rem;
+  border-radius: 5%;
+  opacity: 0%;
+  z-index: 1;
+  transition: all ease-in-out 0.5s;
+  top: -2rem;
+}
+.tech-stack .tech-icons .icon img {
+  height: 2rem;
+  padding: 0.2rem;
+  filter: saturate(0%);
+  transition: all ease 0.5s;
+}
+.tech-stack .tech-icons .icon:hover img {
   filter: saturate(100%);
+  transform: scale(1.2);
+}
+.tech-stack .tech-icons .icon:hover p {
+  opacity: 100%;
+  transform: scale(1.1);
 }
 
 .name {
