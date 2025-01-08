@@ -209,6 +209,7 @@ nav .item {
 .tech-stack .tech-icons .icon {
   display: flex;
   position: relative;
+  justify-content: center;
 }
 .tech-stack .tech-icons .icon p {
   position: absolute;
@@ -219,6 +220,7 @@ nav .item {
   padding: 0.1rem;
   border-radius: 5%;
   opacity: 0%;
+  visibility: hidden;
   z-index: 1;
   transition: all ease-in-out 0.5s;
   top: -2rem;
@@ -235,6 +237,7 @@ nav .item {
 }
 .tech-stack .tech-icons .icon:hover p {
   opacity: 100%;
+  visibility: visible;
   transform: scale(1.1);
 }
 
