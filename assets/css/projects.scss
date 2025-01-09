@@ -1,7 +1,7 @@
 :root {
-  --clr-bg:#111;
-  --clr-grid:#1e1e1e;
-  --clr-red:#d20026;
+  --clr-bg: #111;
+  --clr-grid: #1e1e1e;
+  --clr-red: #d20026;
 }
 
 * {
@@ -17,7 +17,11 @@ body {
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: var(--clr-bg);
-  background-image: radial-gradient(circle, rgba(175, 208, 84, 0.25) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(175, 208, 84, 0.25) 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
   background-size: 40px 40px;
   color: #f0f0f0;
   margin: 0;
@@ -76,18 +80,17 @@ nav {
     &:hover {
       border: 2px solid white;
     }
-    .prj-img{
+    .prj-img {
       padding: 1rem;
       width: 20vw;
-      
+
       img {
         height: 100%;
         width: 100%;
         border-radius: 5%;
         object-fit: fill;
-        }
+      }
     }
-    
 
     .content {
       display: flex;
@@ -96,7 +99,7 @@ nav {
       width: -webkit-fill-available;
       padding: 1rem;
 
-      .heading{
+      .heading {
         display: flex;
         gap: 1rem;
         align-items: center;
@@ -125,7 +128,7 @@ nav {
           transition: all ease 0.3s;
           border: 1px solid transparent;
 
-          &:hover{
+          &:hover {
             filter: invert(0);
             background-color: #fff;
             transform: scale(1.2);
@@ -134,8 +137,7 @@ nav {
           }
         }
       }
-      .description{
-        
+      .description {
         p {
           color: #ddd;
           margin: 0.7rem 0;
@@ -162,22 +164,51 @@ nav {
             }
           }
         }
-
       }
     }
   }
-
 
   .tech-stack {
     display: flex;
     flex-direction: row-reverse;
 
-    img {
-      height: 2rem;
-      padding: 0.5rem;
+    .icon {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      transition: all ease 0.5s;
+
+      &:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+
+      &:hover p {
+        opacity: 1;
+        width: 100%;
+        font-size: 1rem;
+        visibility: visible;
+      }
+
+      img {
+        height: 2rem;
+        padding: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+      p {
+        font-weight: bold;
+        background-color: #fff;
+        color: #000;
+        border-radius: 5%;
+        padding: 0.1rem 0.2rem;
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 0;
+        transition: all ease 0.3s;
+      }
     }
   }
-
 }
 footer {
   width: 70vw;

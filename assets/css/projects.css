@@ -1,7 +1,7 @@
 :root {
-  --clr-bg:#111;
-  --clr-grid:#1e1e1e;
-  --clr-red:#d20026;
+  --clr-bg: #111;
+  --clr-grid: #1e1e1e;
+  --clr-red: #d20026;
 }
 
 * {
@@ -155,9 +155,38 @@ nav .item {
   display: flex;
   flex-direction: row-reverse;
 }
-.projects .tech-stack img {
+.projects .tech-stack .icon {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.projects .tech-stack .icon:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.projects .tech-stack .icon:hover p {
+  opacity: 1;
+  width: 100%;
+  font-size: 1rem;
+  visibility: visible;
+}
+.projects .tech-stack .icon img {
   height: 2rem;
   padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.projects .tech-stack .icon p {
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5%;
+  padding: 0.1rem 0.2rem;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0;
+  transition: all ease 0.3s;
 }
 
 footer {
