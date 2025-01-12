@@ -1,7 +1,7 @@
 :root {
-  --clr-bg:#111;
-  --clr-grid:#1e1e1e;
-  --clr-red:#d20026;
+  --clr-bg: #111;
+  --clr-grid: #1e1e1e;
+  --clr-red: #d20026;
 }
 
 body {
@@ -18,8 +18,7 @@ body {
   padding: 0;
   cursor: default;
 }
-
-nav {
+body nav {
   position: absolute;
   top: 1.5rem;
   height: auto;
@@ -32,7 +31,12 @@ nav {
   align-items: center;
   text-align: center;
 }
-nav img {
+body nav .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+body nav .item img {
   cursor: pointer;
   height: 1.5rem;
   -o-object-fit: contain;
@@ -40,18 +44,12 @@ nav img {
   transition: transform 0.3s, filter 0.3s;
   filter: invert(0.7);
 }
-nav img:hover {
+body nav .item img:hover {
   transform: scale(1.2);
   filter: invert(1);
   stroke: 1px solid white;
 }
-nav .item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.grid-container {
+body .grid-container {
   padding: 0.5rem;
   color: white;
   display: grid;
@@ -59,8 +57,7 @@ nav .item {
   grid-template-columns: repeat(3, 10rem);
   gap: 0.5rem;
 }
-
-.grid-item {
+body .grid-item {
   text-align: center;
   border-radius: 0.5rem;
   background: var(--clr-grid);
@@ -69,49 +66,49 @@ nav .item {
   justify-content: center;
   align-items: center;
 }
-
-.about {
+body .about {
   grid-column: 1/3;
   grid-row: 1/3;
   padding: 0.5rem 0.75rem;
   text-align: left;
   gap: 0.25rem;
 }
-.about h2 {
+body .about h2 {
   font-size: 1rem;
   margin: 0;
 }
-.about p {
+body .about p {
   font-family: Monospace;
   font-size: 0.75rem;
   color: #ababab;
   margin: 0;
   text-align: justify;
 }
-.about span {
+body .about span {
   color: #e8e8e8;
   font-weight: bold;
   transition: 0.3s;
 }
-.about span:hover {
+body .about span:hover {
   border-radius: 0.25rem;
   background: white;
   color: black;
   padding: 0.1rem;
 }
-
-.role {
+body .role {
   cursor: pointer;
   grid-column: 1;
   grid-row: 3;
   background: transparent;
   transition: scale 0.5s;
 }
-.role h2 {
+body .role h2 {
   font-size: 1rem;
 }
-
-.card-inner {
+body .role:hover .card-inner {
+  transform: rotateX(180deg);
+}
+body .card-inner {
   position: relative;
   height: 100%;
   width: 100%;
@@ -120,12 +117,7 @@ nav .item {
   transition: transform 0.75s;
   transform-style: preserve-3d;
 }
-
-.role:hover .card-inner {
-  transform: rotateX(180deg);
-}
-
-.card-front {
+body .card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -135,8 +127,7 @@ nav .item {
   justify-content: center;
   border-radius: 0.5rem;
 }
-
-.card-back {
+body .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -149,23 +140,22 @@ nav .item {
   color: #fff;
   transform: rotateX(180deg);
 }
-.card-back a {
+body .card-back a {
   text-decoration: none;
   color: white;
 }
-.card-back .text-content {
+body .card-back .text-content {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
-
-.image {
+body .image {
   cursor: pointer;
   grid-column: 3;
   grid-row: 1/4;
   transition: scale 0.5s;
 }
-.image img {
+body .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -174,44 +164,42 @@ nav .item {
      object-position: center;
   border-radius: 0.5rem;
 }
-.image:hover {
+body .image:hover {
   scale: 0.95;
 }
-
-.quote {
+body .quote {
   grid-column: 3;
   grid-row: 4;
   background: #d20026;
 }
-.quote p {
+body .quote p {
   font-family: Monospace;
   font-size: 0.75rem;
 }
-
-.tech-stack {
+body .tech-stack {
   grid-column: 1;
   grid-row: 4/7;
   font-family: Monospace;
   padding: 1rem;
   gap: 1rem;
 }
-.tech-stack h2 {
+body .tech-stack h2 {
   font-size: 1.25rem;
   margin: 0;
   margin-top: 1rem;
 }
-.tech-stack .tech-icons {
+body .tech-stack .tech-icons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.tech-stack .tech-icons .icon {
+body .tech-stack .tech-icons .icon {
   display: flex;
   position: relative;
   justify-content: center;
 }
-.tech-stack .tech-icons .icon p {
+body .tech-stack .tech-icons .icon p {
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -225,32 +213,31 @@ nav .item {
   transition: all ease-in-out 0.5s;
   top: -2rem;
 }
-.tech-stack .tech-icons .icon img {
+body .tech-stack .tech-icons .icon img {
   height: 2rem;
   padding: 0.2rem;
   filter: saturate(0%);
   transition: all ease 0.5s;
 }
-.tech-stack .tech-icons .icon:hover img {
+body .tech-stack .tech-icons .icon:hover img {
   filter: saturate(100%);
   transform: scale(1.2);
 }
-.tech-stack .tech-icons .icon:hover p {
+body .tech-stack .tech-icons .icon:hover p {
   opacity: 100%;
   visibility: visible;
   transform: scale(1.1);
 }
-
-.name {
+body .name {
   cursor: pointer;
   grid-column: 2;
   grid-row: 3/5;
   transition: scale 0.5s;
 }
-.name:hover {
+body .name:hover {
   scale: 0.95;
 }
-.name img {
+body .name img {
   height: 40%;
   width: 40%;
   -o-object-fit: cover;
@@ -258,22 +245,20 @@ nav .item {
   -o-object-position: center;
      object-position: center;
 }
-.name h1 {
+body .name h1 {
   font-family: Arial Black;
   font-size: 1.25rem;
 }
-
-.contact {
+body .contact {
   grid-column: 2/4;
   grid-row: 5/7;
 }
-
-.socials {
+body .contact .socials {
   display: flex;
   width: 80%;
   justify-content: space-around;
 }
-.socials img {
+body .contact .socials img {
   height: 2.5rem;
   background: #cccccc;
   filter: invert(100%);
@@ -281,7 +266,7 @@ nav .item {
   border-radius: 0.5rem;
   transition: scale 0.5s, filter 0.4s, background 0.4s;
 }
-.socials img:hover {
+body .contact .socials img:hover {
   filter: invert(0%);
   background: white;
   scale: 1.1;
