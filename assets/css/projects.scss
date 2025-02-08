@@ -27,39 +27,37 @@ body {
   margin: 0;
   padding: 10px;
   cursor: default;
-}
-
-nav {
-  position: absolute;
-  top: 1.5rem;
-  height: auto;
-  width: 7rem;
-  padding: 0.5rem;
-  background-color: var(--clr-grid);
-  border-radius: 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-
-  img {
-    cursor: pointer;
-    height: 1.5rem;
-    object-fit: contain;
-    transition: transform 0.3s, filter 0.3s;
-    filter: invert(0.7);
-
-    &:hover {
-      transform: scale(1.2);
-      filter: invert(1);
-      stroke: 1px solid white;
-    }
-  }
-
-  .item {
+  nav {
+    position: absolute;
+    top: 1.5rem;
+    height: auto;
+    width: 7rem;
+    padding: 0.5rem;
+    background-color: var(--clr-grid);
+    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      img {
+        cursor: pointer;
+        height: 1.5rem;
+        object-fit: contain;
+        transition: transform 0.3s, filter 0.3s;
+        filter: invert(0.7);
+
+        &:hover {
+          transform: scale(1.2);
+          filter: invert(1);
+          stroke: 1px solid white;
+        }
+      }
+    }
   }
 }
 

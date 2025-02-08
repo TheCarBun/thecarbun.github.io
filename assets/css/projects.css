@@ -24,8 +24,7 @@ body {
   padding: 10px;
   cursor: default;
 }
-
-nav {
+body nav {
   position: absolute;
   top: 1.5rem;
   height: auto;
@@ -38,7 +37,12 @@ nav {
   align-items: center;
   text-align: center;
 }
-nav img {
+body nav .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+body nav .item img {
   cursor: pointer;
   height: 1.5rem;
   -o-object-fit: contain;
@@ -46,15 +50,10 @@ nav img {
   transition: transform 0.3s, filter 0.3s;
   filter: invert(0.7);
 }
-nav img:hover {
+body nav .item img:hover {
   transform: scale(1.2);
   filter: invert(1);
   stroke: 1px solid white;
-}
-nav .item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
 }
 
 .projects {
