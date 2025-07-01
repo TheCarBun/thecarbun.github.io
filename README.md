@@ -1,5 +1,5 @@
 # Portfolio Website  
-👉🏻 https://thecarbun.dev 👈🏻
+👉🏻 https://thecarbun.github.io 👈🏻
 
 # Work In Progress:
 
