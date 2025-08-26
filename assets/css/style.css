@@ -237,7 +237,11 @@ body .name {
 body .name:hover {
   scale: 0.95;
 }
-body .name img {
+body .name a {
+  text-decoration: none;
+  color: inherit;
+}
+body .name a img {
   height: 40%;
   width: 40%;
   -o-object-fit: cover;
@@ -245,7 +249,7 @@ body .name img {
   -o-object-position: center;
      object-position: center;
 }
-body .name h1 {
+body .name a h1 {
   font-family: Arial Black;
   font-size: 1.25rem;
 }

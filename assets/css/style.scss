@@ -265,16 +265,20 @@ body {
       scale: 0.95;
     }
 
-    img {
-      height: 40%;
-      width: 40%;
-      object-fit: cover;
-      object-position: center;
-    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      img {
+        height: 40%;
+        width: 40%;
+        object-fit: cover;
+        object-position: center;
+      }
 
-    h1 {
-      font-family: Arial Black;
-      font-size: 1.25rem;
+      h1 {
+        font-family: Arial Black;
+        font-size: 1.25rem;
+      }
     }
   }
 
