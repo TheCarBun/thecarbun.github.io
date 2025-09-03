@@ -151,15 +151,19 @@ body nav .item img:hover {
 }
 
 .projects .project-item .content .description li {
+  color: #aaa;
   list-style-type: square;
   list-style-position: inside;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
+.projects .project-item .content .description li b {
+  color: #fff;
+}
+
 .projects .project-item .content .description li span {
-  font-weight: bold;
-  text-decoration: underline;
+  color: #ddd;
   background-color: var(--clr-grid);
   padding: 0.2rem;
   border-radius: 0.5rem;

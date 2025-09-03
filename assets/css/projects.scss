@@ -137,20 +137,24 @@ body {
       }
       .description {
         p {
-          color: #ddd;
+          color: #aaa;
           margin: 0.7rem 0;
           font-size: 1.2rem;
         }
 
         li {
+          color: #aaa;
           list-style-type: square;
           list-style-position: inside;
           font-size: 1.2rem;
           margin-bottom: 0.5rem;
 
+          b {
+            color: #fff;
+          }
+
           span {
-            font-weight: bold;
-            text-decoration: underline;
+            color: #ddd;
             background-color: var(--clr-grid);
             padding: 0.2rem;
             border-radius: 0.5rem;

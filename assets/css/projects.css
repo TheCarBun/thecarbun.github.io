@@ -128,19 +128,22 @@ body nav .item img:hover {
   border-radius: 0.5rem;
 }
 .projects .project-item .content .description p {
-  color: #ddd;
+  color: #aaa;
   margin: 0.7rem 0;
   font-size: 1.2rem;
 }
 .projects .project-item .content .description li {
+  color: #aaa;
   list-style-type: square;
   list-style-position: inside;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+.projects .project-item .content .description li b {
+  color: #fff;
+}
 .projects .project-item .content .description li span {
-  font-weight: bold;
-  text-decoration: underline;
+  color: #ddd;
   background-color: var(--clr-grid);
   padding: 0.2rem;
   border-radius: 0.5rem;
