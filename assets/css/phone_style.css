@@ -78,7 +78,7 @@ body .about {
   grid-row: 1/3;
   padding: 0.25rem 0.5rem;
   text-align: left;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 body .about h2 {
@@ -88,16 +88,17 @@ body .about h2 {
 
 body .about p {
   font-family: Monospace;
-  font-size: 0.6rem;
-  color: #ababab;
+  font-size: 0.7rem;
+  color: #aaa;
   margin: 0;
   text-align: justify;
 }
 
 body .about span {
-  color: #e8e8e8;
+  color: #ccc;
   font-weight: bold;
   transition: 0.3s;
+  padding: 0.1rem;
 }
 
 body .about span:hover {
