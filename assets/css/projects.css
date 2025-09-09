@@ -81,8 +81,8 @@ body nav .item img:hover {
   height: 100%;
   width: 100%;
   border-radius: 5%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projects .project-item .content {
   display: flex;
