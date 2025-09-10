@@ -11,6 +11,7 @@
 }
 
 body {
+  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,6 +137,11 @@ body {
         }
       }
       .description {
+        user-select: text;
+        &::selection {
+          color: var(--clr-bg);
+          background-color: #fff;
+        }
         p {
           color: #aaa;
           margin: 0.7rem 0;
@@ -151,6 +157,9 @@ body {
 
           b {
             color: #fff;
+            &::selection {
+              background-color: var(--clr-red);
+            }
           }
 
           span {
@@ -158,6 +167,10 @@ body {
             background-color: var(--clr-grid);
             padding: 0.2rem;
             border-radius: 0.5rem;
+
+            &::selection {
+              background-color: var(--clr-red);
+            }
 
             &:hover {
               background-color: #fff;

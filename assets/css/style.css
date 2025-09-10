@@ -5,6 +5,9 @@
 }
 
 body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -83,12 +86,29 @@ body .about p {
   color: #aaa;
   margin: 0;
   text-align: justify;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+body .about p::-moz-selection {
+  color: var(--clr-bg);
+  background-color: #fff;
+}
+body .about p::selection {
+  color: var(--clr-bg);
+  background-color: #fff;
 }
 body .about span {
   color: #ccc;
   font-weight: bold;
   transition: 0.3s;
   padding: 0.1rem;
+}
+body .about span::-moz-selection {
+  background-color: var(--clr-red);
+}
+body .about span::selection {
+  background-color: var(--clr-red);
 }
 body .about span:hover {
   border-radius: 0.25rem;
@@ -384,49 +404,5 @@ body .contact .socials img:hover {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@media screen and (max-width: 600px) {
-  .grid-container {
-    padding: 0.4rem;
-    grid-template-rows: repeat(6, 3rem);
-    grid-template-columns: repeat(3, 6rem);
-    gap: 0.3rem;
-  }
-  .about {
-    padding: 0.1rem 0.3rem;
-    gap: 0.1rem;
-  }
-  .about h2 {
-    font-size: 0.6rem;
-  }
-  .about p {
-    font-size: 0.5rem;
-  }
-  .role h2 {
-    font-size: 0.6rem;
-  }
-  .quote p {
-    font-size: 0.5rem;
-  }
-  .tech {
-    padding: 0.2rem;
-    gap: 0.2rem;
-  }
-  .tech h2 {
-    font-size: 0.8rem;
-  }
-  .tech .icons img {
-    height: 1.2rem;
-  }
-  .name h1 {
-    font-family: Arial Black;
-    font-size: 0.8rem;
-  }
-  .contact h2 {
-    font-size: 0.8rem;
-  }
-  .socials img {
-    height: 1.5rem;
   }
 }

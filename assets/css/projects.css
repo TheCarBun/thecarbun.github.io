@@ -11,6 +11,9 @@
 }
 
 body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,6 +130,19 @@ body nav .item img:hover {
   border: 1px solid white;
   border-radius: 0.5rem;
 }
+.projects .project-item .content .description {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.projects .project-item .content .description::-moz-selection {
+  color: var(--clr-bg);
+  background-color: #fff;
+}
+.projects .project-item .content .description::selection {
+  color: var(--clr-bg);
+  background-color: #fff;
+}
 .projects .project-item .content .description p {
   color: #aaa;
   margin: 0.7rem 0;
@@ -142,11 +158,23 @@ body nav .item img:hover {
 .projects .project-item .content .description li b {
   color: #fff;
 }
+.projects .project-item .content .description li b::-moz-selection {
+  background-color: var(--clr-red);
+}
+.projects .project-item .content .description li b::selection {
+  background-color: var(--clr-red);
+}
 .projects .project-item .content .description li span {
   color: #ddd;
   background-color: var(--clr-grid);
   padding: 0.2rem;
   border-radius: 0.5rem;
+}
+.projects .project-item .content .description li span::-moz-selection {
+  background-color: var(--clr-red);
+}
+.projects .project-item .content .description li span::selection {
+  background-color: var(--clr-red);
 }
 .projects .project-item .content .description li span:hover {
   background-color: #fff;
