@@ -214,6 +214,7 @@ body .tech-stack .tech-icons {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
 }
 body .tech-stack .tech-icons .icon {
   display: flex;

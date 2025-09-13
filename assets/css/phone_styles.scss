@@ -221,6 +221,7 @@ body {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      gap: 0;
 
       .icon {
         display: flex;
@@ -231,6 +232,7 @@ body {
           position: absolute;
           background-color: #fff;
           color: #000;
+          font-size: 0.5rem;
           font-weight: bold;
           text-align: center;
           padding: 0.1rem;
